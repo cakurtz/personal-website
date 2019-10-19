@@ -1,0 +1,13 @@
+<div class="gallery-container">
+	<div class="gallery-bar-container" *ngFor="let category of iconMapKeys">
+		<div class="icon-img-container" *ngFor="let icon of getIcons(category)">
+			<img src="{{icon}}">
+		</div>
+		<div class="arrow-icon">
+			<img src="../../assets/arrow-icon.png">
+		</div>
+		<div class="category-header">
+			<p>{{ category }}</p>
+		</div>
+	</div>
+</div>

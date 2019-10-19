@@ -1,0 +1,77 @@
+import { Component, OnInit } from '@angular/core';
+import { FileRetrievalService } from '../../app/file-retrieval.service';
+
+@Component({
+  selector: 'gallery-bar',
+  templateUrl: './gallery-bar.component.html',
+  styleUrls: ['./gallery-bar.component.scss']
+})
+export class GalleryBar implements OnInit {
+  title = 'gallery-bar';
+  baseUrl = 'https://s3.amazonaws.com/www.cotykurtz.com/';
+  imagePath = 'images/';
+  iconPath = 'icons/';
+  imageEnding = ".jpeg";
+  barLength: number;
+  urlPaths: String[];
+  categoryNames: String[];
+  iconPaths: String[];
+  iconMap: Map<String, String[]>;
+  iconMapKeys;
+
+  constructor(private fileRetrievalService: FileRetrievalService) {}
+
+  ngOnInit() {
+    this.iconMap = new Map();
+    this.categoryNames = [];
+    this.iconPaths = [];
+
+    this.fileRetrievalService.getS3ObjectList().then(result => {
+      this.barLength = result.length;
+      this.urlPaths = this.extractUrlPath(result);
+      this.extractCategoryNames();
+    });
+  }
+
+  private extractUrlPath(data: any): String[] {
+    const urls: String[] = [];
+    for (const entry of data) {
+      urls.push(entry.Key);
+    }
+    return urls;
+  }
+
+  private extractCategoryNames() {
+    var currentPath: String = "";
+    var currentCategory: String = "";
+    for (const path of this.urlPaths) {
+      if (path.match(/^images\/[A-z]+\/$/)) {
+        const splitName: String[] = path.split("/");
+        currentCategory = splitName[1];
+        this.categoryNames.push(currentCategory);
+        this.iconMap.set(currentCategory, []);
+        currentPath = path;
+      } 
+      if (path.startsWith(currentPath + this.iconPath) && path.endsWith(this.imageEnding)) {
+        const categoryValues = this.iconMap.get(currentCategory);
+        categoryValues.push(this.baseUrl + path);
+      }
+    }
+    this.iconMapKeys = this.iconMap.keys();
+  }
+
+  private extractIconsForCategory(category: String) {
+    const mapIconPaths = [];
+    for (const path of this.urlPaths) {
+      if (path.match(/^images\/[A-z]+\/icons\/.+\.jpeg$/)) {
+        this.iconPaths.push(path);
+        mapIconPaths.push(path);
+      }
+    }
+    this.iconMap.set(category, mapIconPaths);
+  }
+
+  getIcons(category: String) {
+    return this.iconMap.get(category);
+  }
+}
