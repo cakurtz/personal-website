@@ -2,21 +2,18 @@
 	display: flex;
 	justify-content: center;
 	height: 100%;
-	background: url('../../assets/world-map-art.png');
-	background-repeat: no-repeat;
+	background: rgba(255, 255, 255);
 	background-size: 100%;
 }
 
 div.gallery-container {
-	border: 2px solid black;
-	background: rgba(255, 255, 255, 0.8);
-	border-radius: 30px;
-	margin: 50px auto;
+	margin-right: 100px;
 	padding: 50px;
 
 	div.gallery-bar-container {
 		display: flex;
 		align-items: center;
+		transition: all .2s ease-in-out;
 		
 		.category-header {
 			padding-left: 25px;
@@ -33,5 +30,9 @@ div.gallery-container {
 			height: 100px;
 			width: 80px;
 		}
+	}
+
+	div.gallery-bar-container:hover {
+		transform: scale(1.1);
 	}
 }

@@ -9,9 +9,7 @@ declare const AWS: any;
 })
 export class FileRetrievalService {
   s3: any;
-  params = {
-    Prefix: 'images/'
-  };
+  params: object;
 
   constructor() { 
     AWS.config.region = 'us-east-1'; // Region
@@ -25,7 +23,10 @@ export class FileRetrievalService {
     });
   }
 
-  getS3ObjectList(): Promise<any> {
+  getS3ObjectList(prefix: string): Promise<any> {
+    this.params = {
+      Prefix: prefix
+    };
     return new Promise((resolve, reject) => {
       this.s3.listObjects(this.params, function(err, data) {
         if (err) {

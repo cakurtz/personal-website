@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FileRetrievalService } from '../../app/file-retrieval.service';
+import { Constants } from 'src/app/constants';
 
 @Component({
   selector: 'gallery-bar',
@@ -8,7 +9,6 @@ import { FileRetrievalService } from '../../app/file-retrieval.service';
 })
 export class GalleryBar implements OnInit {
   title = 'gallery-bar';
-  baseUrl = 'https://s3.amazonaws.com/www.cotykurtz.com/';
   imagePath = 'images/';
   iconPath = 'icons/';
   imageEnding = ".jpeg";
@@ -26,7 +26,7 @@ export class GalleryBar implements OnInit {
     this.categoryNames = [];
     this.iconPaths = [];
 
-    this.fileRetrievalService.getS3ObjectList().then(result => {
+    this.fileRetrievalService.getS3ObjectList('images/').then(result => {
       this.barLength = result.length;
       this.urlPaths = this.extractUrlPath(result);
       this.extractCategoryNames();
@@ -42,6 +42,7 @@ export class GalleryBar implements OnInit {
   }
 
   private extractCategoryNames() {
+    const constants = new Constants;
     var currentPath: String = "";
     var currentCategory: String = "";
     for (const path of this.urlPaths) {
@@ -54,7 +55,7 @@ export class GalleryBar implements OnInit {
       } 
       if (path.startsWith(currentPath + this.iconPath) && path.endsWith(this.imageEnding)) {
         const categoryValues = this.iconMap.get(currentCategory);
-        categoryValues.push(this.baseUrl + path);
+        categoryValues.push(constants.baseUrl + path);
       }
     }
     this.iconMapKeys = this.iconMap.keys();

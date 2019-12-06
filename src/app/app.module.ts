@@ -7,6 +7,9 @@ import { Footer } from 'src/components/footer/footer.component';
 import { Gallery } from 'src/components/gallery/gallery.component';
 import { GalleryBar } from 'src/components/gallery-bar/gallery-bar.component';
 import { MenuBar } from 'src/components/menu-bar/menu-bar.component';
+import { HomeComponent } from 'src/components/home/home.component';
+import { NgsRevealModule } from 'ngx-scrollreveal';
+import { ParticlesModule } from 'angular-particle';
 
 @NgModule({
   declarations: [
@@ -14,10 +17,13 @@ import { MenuBar } from 'src/components/menu-bar/menu-bar.component';
     Footer,
     Gallery,
     GalleryBar,
+    HomeComponent,
     MenuBar
   ],
   imports: [
     BrowserModule,
+    NgsRevealModule,
+    ParticlesModule,
     AppRoutingModule
   ],
   providers: [],
