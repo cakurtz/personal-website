@@ -1,0 +1,74 @@
+.razor-blade-div-top {
+	position: relative;
+	width: 100%;
+	height: 300px;
+	background-image: url("../../assets/blue-background.jpg");
+	box-sizing: border-box;
+	padding: 30px;
+	color: #fff;
+	border-top: 3px solid #B5A642;
+}
+
+.razor-blade-div-top:after {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	content: '';
+	background: inherit;
+	z-index: -1;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	transform-origin: top right;
+	transform: skewY(-3deg);
+}
+
+.razor-blade-div-divider-top {
+	position: relative;
+	width: 100%;
+	height: 3px;
+}
+
+.razor-blade-div-divider-top:after {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	content: '';
+	background: #B5A642;
+	z-index: -1;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	transform-origin: top right;
+	transform: skewY(-3deg);
+}
+
+.razor-blade-div-bottom {
+	position: relative;
+	width: 100%;
+	height: 400px;
+	background: #2B2D2F;
+	box-sizing: border-box;
+	padding: 30px;
+	color: #fff;
+	transform-origin: top right;
+	transform: skewY(-3deg);
+}
+
+.razor-blade-div-bottom:after {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	content: '';
+	background: inherit;
+	z-index: -1;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	transform-origin: bottom left;
+	transform: skewY(6deg);
+	border-bottom: 4px solid #B5A642
+}
