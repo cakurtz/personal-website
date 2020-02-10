@@ -15,6 +15,7 @@ import { RazorBlade } from 'src/components/razor-blade/razor-blade.component';
 import { Title } from 'src/components/title/title.component';
 import { Detail } from 'src/components/detail/detail.component';
 import { Icon } from 'src/components/icon/icon.component';
+import { IconContainer } from 'src/components/icon-container/icon-container.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { Icon } from 'src/components/icon/icon.component';
     GalleryBar,
     HomeComponent,
     Icon,
+    IconContainer,
     MenuBar,
     RazorBlade,
     Title

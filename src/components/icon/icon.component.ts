@@ -11,6 +11,5 @@ export class Icon implements OnInit {
     
     ngOnInit() {
         this.iconSrcPath = "../../assets/" + this.iconFileName;
-        console.log(this.iconSrcPath);
     }
 }
