@@ -12,17 +12,23 @@ import { NgsRevealModule } from 'ngx-scrollreveal';
 import { ParticlesModule } from 'angular-particle';
 import { AboutMePage } from 'src/components/about-me-page/about-me-page.component';
 import { RazorBlade } from 'src/components/razor-blade/razor-blade.component';
+import { Title } from 'src/components/title/title.component';
+import { Detail } from 'src/components/detail/detail.component';
+import { Icon } from 'src/components/icon/icon.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutMePage,
+    Detail,
     Footer,
     Gallery,
     GalleryBar,
     HomeComponent,
+    Icon,
     MenuBar,
-    RazorBlade
+    RazorBlade,
+    Title
   ],
   imports: [
     BrowserModule,
