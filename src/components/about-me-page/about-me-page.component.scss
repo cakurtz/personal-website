@@ -1,4 +1,64 @@
-.icons {
-    display: flex;
-    justify-content: center;
+.section-divider {
+    position: relative;
+    width: 100%;
+    height: 3px;
+    margin-top: 20px;
+}
+
+.section-divider:after {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	content: '';
+	background: #B5A642;
+	z-index: -1;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	transform-origin: top right;
+	transform: skewY(-3deg);
+}
+
+.language-icon-container {
+	position: relative;
+	width: 100%;
+	content: '';
+	background-image: url("../../assets/blue-background.jpg");
+	color: #ffffff;
+	box-sizing: border-box;
+	padding: 30px;
+	transform-origin: top right;
+	transform: skewY(-3deg);
+	
+	.icons-header {
+		margin-top: 50px;
+		transform: skewY(3deg);
+	}
+	
+	.icons-container {
+		display: flex;
+		justify-content: center;
+		align-items: baseline;
+		flex-wrap: wrap;
+		margin: auto;
+		max-width: 60%;
+		transform: skewY(3deg);
+	}
+}
+
+.language-icon-container::after {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	content: '';
+	background: inherit;
+	z-index: -1;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	transform-origin: bottom left;
+	transform: skewY(3deg);
+	border-bottom: 4px solid #B5A642
 }

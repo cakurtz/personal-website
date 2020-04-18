@@ -1,0 +1,43 @@
+:host {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    
+    .detail-container {
+        display: flex;
+        
+        h2 {
+            margin-top: 16px;
+            margin-right: 100px;
+            width: 150px;
+            text-align: left;
+        }
+
+        .detail-entry-container {
+            text-align: left;
+            width: 300px;
+
+            .entry-data.name {
+                margin-bottom: 0px;
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            .entry-data.secondary-name {
+                margin-top: 5px;
+                margin-bottom: 0px;
+                font-size: 15px;
+                font-weight: bold;
+            }
+
+            .entry-data.sub-name {
+                margin: 0px;
+                font-size: 13px;
+            }
+
+            .entry-data.sub-name.desc {
+                margin-top: 10px;
+            }
+        }
+    }
+}

@@ -1,7 +1,17 @@
 <razor-blade></razor-blade>
-<div class="icons">
-    <icon-container [iconDesc]="'Angular'" [iconFileName]="'angular.png'"></icon-container>
-    <icon-container [iconDesc]="'Angular'" [iconFileName]="'angular.png'"></icon-container>
-    <icon-container [iconDesc]="'Angular'" [iconFileName]="'angular.png'"></icon-container>
-    <icon-container [iconDesc]="'Angular'" [iconFileName]="'angular.png'"></icon-container>
+<detail [detailData]="educationDetails"></detail>
+<detail [detailData]="experienceDetails"></detail>
+<detail [detailData]="volunteerDetails"></detail>
+
+<div class="section-divider first"></div>
+<div class="section-divider second"></div>
+<div class="section-divider third"></div>
+
+<div class="language-icon-container">
+    <h1 class="icons-header">Languages & Tools</h1>
+    <div class="icons-container">
+        <div class="single-icon-container" *ngFor="let icon of iconData">
+            <icon-container [iconDesc]="icon.title" [iconFileName]="icon.imagePath"></icon-container>
+        </div>
+    </div>
 </div>
