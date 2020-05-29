@@ -16,6 +16,8 @@ import { Title } from 'src/components/title/title.component';
 import { Detail } from 'src/components/detail/detail.component';
 import { Icon } from 'src/components/icon/icon.component';
 import { IconContainer } from 'src/components/icon-container/icon-container.component';
+import { ProjectsPage } from 'src/components/projects-page/projects-page.component';
+import { MapComponent } from 'src/components/map/map.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { IconContainer } from 'src/components/icon-container/icon-container.comp
     HomeComponent,
     Icon,
     IconContainer,
+    ProjectsPage,
+    MapComponent,
     MenuBar,
     RazorBlade,
     Title
