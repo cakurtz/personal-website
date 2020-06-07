@@ -2,59 +2,59 @@ import { IconModel } from './models/about-me-icon-model';
 
 export const ABOUT_ME_ICON_MODEL: IconModel[] = [
     {
-        title: 'Java',
+        name: 'Java',
         imagePath: 'java-logo.png'
     },
     {
-        title: 'Angular 2+',
+        name: 'Angular 8',
         imagePath: 'angular-logo.png'
     },
     {
-        title: 'Node.js',
+        name: 'Node.js',
         imagePath: 'nodejs-logo.svg'
     },
     {
-        title: 'JavaScript',
+        name: 'JavaScript',
         imagePath: 'javascript-logo.png'
     },
     {
-        title: 'HTML 5',
+        name: 'HTML 5',
         imagePath: 'html-logo.png'
     },
     {
-        title: 'CSS 3',
+        name: 'CSS 3',
         imagePath: 'css-logo.png'
     },
     {
-        title: 'AWS',
+        name: 'AWS',
         imagePath: 'aws-logo.png'
     },
     {
-        title: 'Jenkins',
+        name: 'Jenkins',
         imagePath: 'jenkins-logo.png'
     },
     {
-        title: 'Maven',
+        name: 'Maven',
         imagePath: 'maven-logo.png'
     },
     {
-        title: 'Apache JMeter',
+        name: 'Apache JMeter',
         imagePath: 'apache-logo.png'
     },
     {
-        title: 'SonarQube',
+        name: 'SonarQube',
         imagePath: 'sonarqube-logo.png'
     },
     {
-        title: 'Sass',
+        name: 'Sass',
         imagePath: 'sass-logo.svg'
     },
     {
-        title: 'VS Code',
+        name: 'VS Code',
         imagePath: 'vscode-logo.png'
     },
     {
-        title: 'Swift',
+        name: 'Swift',
         imagePath: 'Swift_logo_black.svg'
     }
 ];

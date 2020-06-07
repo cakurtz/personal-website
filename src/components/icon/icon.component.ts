@@ -6,6 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
 	styleUrls: ['./icon.component.scss']
 })
 export class Icon implements OnInit {
+    @Input() iconName: string;
     @Input() iconFileName: string;
     iconSrcPath: string;
     

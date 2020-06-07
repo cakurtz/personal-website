@@ -1,4 +1,4 @@
 export interface IconModel {
-    title: string;
+    name: string;
     imagePath: string;
 }
