@@ -1,9 +1,7 @@
 :host {
     display: block;
-    margin-top: 20px;
     margin-bottom: 20px;
     width: 125px;
-    // height: 125px;
 }
 
 .icon-image {
@@ -12,14 +10,12 @@
 }
 
 .icon-text {
-    position: absolute;
-    display: none;
-    text-align: center;
+    opacity: 0;
 }
 
 .icon-image:hover {
     transform: scale(1.25);
     +.icon-text {
-        display: block;
+        opacity: 1;
     }
 }

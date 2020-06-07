@@ -19,7 +19,6 @@ import { RazorBlade } from 'src/components/razor-blade/razor-blade.component';
 import { Title } from 'src/components/title/title.component';
 import { Detail } from 'src/components/detail/detail.component';
 import { Icon } from 'src/components/icon/icon.component';
-import { IconContainer } from 'src/components/icon-container/icon-container.component';
 import { ProjectsPage } from 'src/components/projects-page/projects-page.component';
 import { MapComponent } from 'src/components/map/map.component';
 import { TravelModalComponent } from 'src/components/travel-modal/travel-modal.component';
@@ -34,7 +33,6 @@ import { TravelModalComponent } from 'src/components/travel-modal/travel-modal.c
     GalleryBar,
     HomeComponent,
     Icon,
-    IconContainer,
     ProjectsPage,
     MapComponent,
     MenuBar,
