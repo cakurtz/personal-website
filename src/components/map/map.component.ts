@@ -86,10 +86,6 @@ export class MapComponent implements AfterViewInit {
         }
       }
     });
-    
-    map.modal.events.on("closed", function(ev) {
-      // ev.target.series.
-    });
 
     // Create hover state and set alternative fill color
     let hs = polygonTemplate.states.create("hover");
