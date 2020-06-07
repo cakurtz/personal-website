@@ -11,7 +11,7 @@
     <h1 class="icons-header" ngsReveal>Languages & Tools</h1>
     <div class="icons-container" ngsReveal>
         <div class="single-icon-container" *ngFor="let icon of iconData">
-            <icon-container [iconName]="icon.name" [iconFileName]="icon.imagePath"></icon-container>
+            <icon [iconName]="icon.name" [iconFileName]="icon.imagePath"></icon>
         </div>
     </div>
 </div>
