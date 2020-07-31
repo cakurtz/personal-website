@@ -21,7 +21,6 @@ import { Detail } from 'src/components/detail/detail.component';
 import { Icon } from 'src/components/icon/icon.component';
 import { ProjectsPage } from 'src/components/projects-page/projects-page.component';
 import { MapComponent } from 'src/components/map/map.component';
-import { TravelModalComponent } from 'src/components/travel-modal/travel-modal.component';
 
 @NgModule({
   declarations: [
@@ -37,8 +36,7 @@ import { TravelModalComponent } from 'src/components/travel-modal/travel-modal.c
     MapComponent,
     MenuBar,
     RazorBlade,
-    Title,
-    TravelModalComponent
+    Title
   ],
   imports: [
     BrowserModule,
@@ -50,7 +48,6 @@ import { TravelModalComponent } from 'src/components/travel-modal/travel-modal.c
     MatDialogModule
   ],
   providers: [],
-  bootstrap: [AppComponent],
-  entryComponents: [TravelModalComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

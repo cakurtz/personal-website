@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FileRetrievalService } from '../../app/file-retrieval.service';
+import { FileRetrievalService } from '../../services/file-retrieval.service';
 import { Constants } from 'src/app/constants';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
-import { TravelModalComponent } from '../travel-modal/travel-modal.component';
 
 @Component({
   selector: 'gallery-bar',
@@ -83,6 +82,6 @@ export class GalleryBar implements OnInit {
     dialogConfig.id = "travel-modal-component";
     dialogConfig.height = "350px";
     dialogConfig.width = "600px";
-    const modalDialog = this.matDialog.open(TravelModalComponent, dialogConfig);
+    // const modalDialog = this.matDialog.open(TravelModalComponent, dialogConfig);
   }
 }

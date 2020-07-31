@@ -2,9 +2,8 @@ import { Component, AfterViewInit, NgZone } from '@angular/core';
 import * as am4core from "@amcharts/amcharts4/core";
 import * as am4maps from "@amcharts/amcharts4/maps";
 import am4geodata_worldLow from "@amcharts/amcharts4-geodata/worldLow";
-import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
-import { TravelModalComponent } from '../travel-modal/travel-modal.component';
-import { modalInnerHtml, mapData } from './map-modal-data';
+import { MatDialog } from '@angular/material/dialog';
+import { mapData } from './map-modal-data';
 
 @Component({
 	selector: 'map',
@@ -68,7 +67,7 @@ export class MapComponent implements AfterViewInit {
     polygonTemplate.propertyFields.fill = "fill";
     polygonTemplate.events.on("hit", function(ev) {
       ev.target.series.chart.zoomToMapObject(ev.target);
-      const country = ev.target.dataItem.dataContext.name;
+      const country = (ev.target.dataItem.dataContext as any).name;
       for (let entry of mapData) {
         if (entry.name === country) {
           map.openModal(`
@@ -117,13 +116,5 @@ export class MapComponent implements AfterViewInit {
         this.map.dispose();
       }
     });
-  }
-
-  openModal() {
-    const dialogConfig = new MatDialogConfig();
-    dialogConfig.id = "travel-modal-component";
-    dialogConfig.height = "350px";
-    dialogConfig.width = "600px";
-    const modalDialog = this.matDialog.open(TravelModalComponent, dialogConfig);
   }
 }

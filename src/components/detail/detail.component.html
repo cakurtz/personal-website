@@ -12,19 +12,11 @@
                         <p class="entry-data sub-name" *ngIf="titleEntry.startDate && titleEntry.endDate">{{ titleEntry.startDate }} - {{ titleEntry.endDate }}</p>
                     </div>
                 </ng-container>
-                <!-- <ng-container *ngIf="entry.projects">
-                    <div class="detail-entry-project" *ngFor="let project of entry.projects">
-                        <p class="entry-data" *ngIf="project.name">{{ project.name }}</p>
-                        <p class="entry-data" *ngIf="project.startDate && project.endDate">{{ project.startDate }} - {{ project.endDate }}</p>
-                        <p class="entry-data" *ngIf="project.description">{{ project.description }}</p>
-                    </div>
-                </ng-container> -->
             </ng-container>
             <ng-container *ngIf="isEducation">
                 <p class="entry-data name" *ngIf="entry.name">{{ entry.name }}</p>
                 <p class="entry-data sub-name" *ngIf="entry.startDate && entry.endDate">{{ entry.startDate }} - {{ entry.endDate }}</p>
                 <p class="entry-data sub-name" *ngIf="entry.degreeEarned">{{ entry.degreeEarned }}</p>
-                <!-- <p class="entry-data" *ngIf="entry.major">{{ entry.major }}</p> -->
             </ng-container>
             <ng-container *ngIf="isVolunteer">
                     <p class="entry-data name" *ngIf="entry.name">{{ entry.name }}</p>
