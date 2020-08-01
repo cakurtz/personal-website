@@ -1,9 +1,4 @@
-export const modalInnerHtml = `
-    <h1>{{country}}</h1>
-    <img src='src/assets/map/{{country}}.jpeg'>
-`;
-
-export const mapData: CountryData[] = [
+export const MAP_DATA: CountryData[] = [
     {
         name: 'Denmark',
         imagePath: '../../assets/map/Denmark.jpeg',

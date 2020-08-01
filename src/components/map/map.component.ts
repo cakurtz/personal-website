@@ -3,7 +3,7 @@ import * as am4core from "@amcharts/amcharts4/core";
 import * as am4maps from "@amcharts/amcharts4/maps";
 import am4geodata_worldLow from "@amcharts/amcharts4-geodata/worldLow";
 import { MatDialog } from '@angular/material/dialog';
-import { mapData } from './map-modal-data';
+import { MAP_DATA } from '../../data/map-modal-data';
 
 @Component({
 	selector: 'map',
@@ -68,7 +68,7 @@ export class MapComponent implements AfterViewInit {
     polygonTemplate.events.on("hit", function(ev) {
       ev.target.series.chart.zoomToMapObject(ev.target);
       const country = (ev.target.dataItem.dataContext as any).name;
-      for (let entry of mapData) {
+      for (let entry of MAP_DATA) {
         if (entry.name === country) {
           map.openModal(`
             <h2 style='margin-top: 0px;'>${entry.name}</h2>
