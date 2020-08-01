@@ -21,8 +21,8 @@ export const mapData: CountryData[] = [
             'This castle featured a breathtaking landscape, a labyrinth of rooms and treasures ' +
             'to discover on a self guided tour. At the top of the castle was a real throne ' +
             'room filled with silver and gold. The tour ended going into the cellar and ' +
-            'seeing all the heirlooms such as the King and Queen\'s crowns. Another thing ' +
-            'I loved about the city was how green it was. Most people walked, rode biked, ' +
+            'seeing all the heirlooms such as the King\'s and Queen\'s crowns. Another thing ' +
+            'I loved about the city was how green it was. Most people walked, rode bikes, ' +
             'or utilized the fully electronic and automated metro rail system. Copenhagen ' +
             'is also very proud to be a gay friendly place and all over the city you can ' +
             'find little indicators of this from souveneirs to pride flags. Copenhagen ' +
